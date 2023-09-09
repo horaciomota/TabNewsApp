@@ -9,7 +9,9 @@ import Foundation
 
 func fetchNewPosts() async throws -> [newsDataModel] {
     
-    guard let url = URL(string: "https://www.tabnews.com.br/api/v1/contents") else {
+    let baseURL = "https://www.tabnews.com.br/api/v1/contents"
+
+    guard let url = URL(string: baseURL) else {
         print("Ops...Check your URL, something went wrong")
         throw URLError(.badURL)
     }

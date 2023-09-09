@@ -1,5 +1,5 @@
 //
-//  tabNewsApiConection.swift
+//  fetchNewPosts.swift
 //  TabNewsSwift
 //
 //  Created by Horacio Mota on 09/09/2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-func fetchDataFromApi() async throws -> [newsDataModel] {
+func fetchNewPosts() async throws -> [newsDataModel] {
     
     guard let url = URL(string: "https://www.tabnews.com.br/api/v1/contents") else {
         print("Ops...Check your URL, something went wrong")

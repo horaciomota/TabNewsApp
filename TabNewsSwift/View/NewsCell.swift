@@ -16,7 +16,7 @@ struct NewsCell: View {
         NavigationView() {
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 12) {
-                    ForEach(ListofNews) { new in
+                    ForEach(ListofNews, id:\.id) { new in
                         Text(new.title)
                             .font(.headline)
                             .foregroundColor(.primary)
@@ -33,7 +33,7 @@ struct NewsCell: View {
             .navigationTitle("News")
             .task {
                 do {
-                    ListofNews = try await fetchDataFromApi()
+                    ListofNews = try await fetchNewPosts()
                 }catch {
                     print("Somethig went wrong: \(error)")
                 }

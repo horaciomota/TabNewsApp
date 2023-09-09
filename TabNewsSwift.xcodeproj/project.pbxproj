@@ -14,6 +14,7 @@
 		83FB49852AAC8F140000CCC8 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FB49842AAC8F140000CCC8 /* NewsModel.swift */; };
 		83FB49882AAC8F7B0000CCC8 /* ListOfNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FB49872AAC8F7B0000CCC8 /* ListOfNewsView.swift */; };
 		83FB498A2AAC90630000CCC8 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FB49892AAC90630000CCC8 /* NewsCell.swift */; };
+		83FB498C2AAC93610000CCC8 /* tabNewsApiConection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FB498B2AAC93610000CCC8 /* tabNewsApiConection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		83FB49842AAC8F140000CCC8 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		83FB49872AAC8F7B0000CCC8 /* ListOfNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfNewsView.swift; sourceTree = "<group>"; };
 		83FB49892AAC90630000CCC8 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		83FB498B2AAC93610000CCC8 /* tabNewsApiConection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabNewsApiConection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		83FB49862AAC8F220000CCC8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				83FB498B2AAC93610000CCC8 /* tabNewsApiConection.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				83FB49852AAC8F140000CCC8 /* NewsModel.swift in Sources */,
 				83FB49762AAC8CC00000CCC8 /* ContentView.swift in Sources */,
 				83FB49742AAC8CC00000CCC8 /* TabNewsSwiftApp.swift in Sources */,
+				83FB498C2AAC93610000CCC8 /* tabNewsApiConection.swift in Sources */,
 				83FB498A2AAC90630000CCC8 /* NewsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,16 +8,36 @@
 import SwiftUI
 
 struct NewsCell: View {
+    
+    @State var ListofNews : [newsDataModel] = []
+    
     var body: some View {
     
         NavigationView() {
             ScrollView {
-                LazyVStack(alignment: .leading) {
-                    Text ("[PITCH] Math-Right: um simples joguinho de cálculo")
-                    Text ("12 tabcoins · 6 comentários · andreyTarXz ·")
+                LazyVStack(alignment: .leading, spacing: 12) {
+                    ForEach(ListofNews) { new in
+                        Text(new.title)
+                            .font(.headline)
+                            .foregroundColor(.primary)
+                        
+                        
+                        Text("Post criado por \(new.owner_username)")
+                            .foregroundColor(.secondary)
+                            .font(.footnote)
+                    }
+        
 
                 }.padding(.horizontal)
-            }.navigationTitle("News")
+            }
+            .navigationTitle("News")
+            .task {
+                do {
+                    ListofNews = try await fetchDataFromApi()
+                }catch {
+                    print("Somethig went wrong: \(error)")
+                }
+            }
         }
         
     }

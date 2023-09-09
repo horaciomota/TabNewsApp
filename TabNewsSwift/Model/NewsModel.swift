@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct newsDataModel: Codable, Identifiable {
+    var id: String
+    var title: String
+    var created_at: String
+    var tabcoins: Int
+    var owner_username: String
+}

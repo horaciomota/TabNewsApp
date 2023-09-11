@@ -19,7 +19,8 @@ struct NewsCell: View {
                             .foregroundColor(.secondary)
                             .font(.footnote)
                         }
-                }.padding(.horizontal)
+                }
+                .padding(.horizontal)
             }
             .navigationTitle("News")
             .task {

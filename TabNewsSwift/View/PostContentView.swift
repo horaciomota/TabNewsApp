@@ -2,7 +2,7 @@ import SwiftUI
 
 struct PostContentView: View {
     
-    let postContent: newsDataModel
+    var postContent: postModel
     
     var body: some View {
         ScrollView {
@@ -11,13 +11,20 @@ struct PostContentView: View {
                     .font(.headline)
                     .foregroundColor(.primary)
                 
-                Text("Post criado por \(postContent.owner_username)")
+                Text("Post criado por \(postContent.title)")
                     .foregroundColor(.secondary)
                     .font(.footnote)
             }
             .padding(.horizontal)
         }
         .navigationTitle("Post")
+        .task {
+            do {
+                postContent = try await fetchforContent(owner_username: "x", slug: "String")
+            }catch {
+                print("Something went wrong: \(error)")
+            }
+        }
     }
 }
 

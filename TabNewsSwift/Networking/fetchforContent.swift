@@ -9,7 +9,8 @@ import Foundation
 
 struct postModel: Codable, Identifiable {
     var id: String
-    var title: String    
+    var title: String
+    
 }
 
 
